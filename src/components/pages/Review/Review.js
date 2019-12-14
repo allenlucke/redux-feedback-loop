@@ -5,8 +5,24 @@ import axios from 'axios';
 
 class Review extends Component {
 
+    //POST to server
+    postFeedback() {
+        axios({
+            method: 'POST',
+            url: '/feedback',
+            data: this.props.store.feedbackReducer
+        })
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((err) => {
+            console.warn(err);
+        })
+    }
+
     onSubmit = (event) => {
         alert('Are you sure you want to Submit?');
+        this.postFeedback();
         this.props.history.push('/');
     }
     render() {
