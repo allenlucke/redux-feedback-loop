@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
 class Feeling extends Component {
+    
     state = {
         feeling: 0,
     }
@@ -17,7 +18,7 @@ class Feeling extends Component {
         event.preventDefault();
 
         this.props.dispatch({
-            type: 'ADD_TO_FEEDBACK',
+            type: 'ADD_FEELING_TO_FEEDBACK',
             payload: this.state,
         });
         //Navigates to understanding

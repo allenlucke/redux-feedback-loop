@@ -15,6 +15,21 @@ const defaultFeedback = {
 };
 
 //Reducers
+const feedbackReducer = (state = defaultFeedback, action) => {
+    if(action.type === 'ADD_FEELING_TO_FEEDBACK') {
+        return{
+            ...state,
+            ...action.payload
+        }
+    }
+    else if(action.type === 'ADD_UNDERSTANDING_TO_FEEDBACK') {
+        return{
+            ...state,
+            ...action.payload
+        }
+    }
+    return state;
+}
 
 
 
@@ -24,7 +39,7 @@ const defaultFeedback = {
 
 const storeInstance = createStore(
     combineReducers({
-
+        feedbackReducer
     }),
     applyMiddleware(logger),
 )
