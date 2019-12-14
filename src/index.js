@@ -28,6 +28,12 @@ const feedbackReducer = (state = defaultFeedback, action) => {
             ...action.payload
         }
     }
+    else if(action.type === 'ADD_SUPPORT_TO_FEEDBACK') {
+        return{
+            ...state,
+            ...action.payload
+        }
+    }
     return state;
 }
 
