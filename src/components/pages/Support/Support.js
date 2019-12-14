@@ -96,4 +96,4 @@ class Support extends Component {
 }
 
 
-export default connect(mapStoreToProps)(Support)
+export default connect(mapStoreToProps)(Support);

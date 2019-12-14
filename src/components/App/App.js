@@ -12,6 +12,7 @@ import Understanding from '../pages/Understanding/Understanding';
 import Support from '../pages/Support/Support';
 import Comments from '../pages/Comments/Comments';
 import Review from '../pages/Review/Review'
+import Home from '../pages/Home/Home';
 
 
 class App extends Component {
@@ -22,13 +23,16 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
+          <h6 className="link"><Link to='/admin'>Admin</Link></h6>
         </header>
         <br/>
-        <Route path="/" exact component={Feeling} />
+        <Route path="/" exact component={Home} />
+        <Route path="/feeling" component={Feeling} />
         <Route path="/understanding" component={Understanding} />
         <Route path="/support" component={Support} />
         <Route path="/comments" component={Comments} />
         <Route path="/review" component={Review} />
+
       </div>
       </Router>
     );

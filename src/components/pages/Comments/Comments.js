@@ -36,9 +36,7 @@ class Comments extends Component {
                     value={this.state.comments}
                     onChange={(event) => this.changeField(event, 'comments')}
                     />
-                    
-
-                <button>NEXT</button>
+                    <button>NEXT</button>
                 </form>
             </div>
         );
