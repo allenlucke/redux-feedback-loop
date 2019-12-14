@@ -16,7 +16,7 @@ class Feeling extends Component {
 
     goToNext = (event) => {
         event.preventDefault();
-
+        //dispatched feeling to feedback reducer
         this.props.dispatch({
             type: 'ADD_FEELING_TO_FEEDBACK',
             payload: this.state,

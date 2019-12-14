@@ -23,6 +23,7 @@ class Review extends Component {
     onSubmit = (event) => {
         alert('Are you sure you want to Submit?');
         this.postFeedback();
+        //Navigates to success page
         this.props.history.push('/success');
     }
     render() {

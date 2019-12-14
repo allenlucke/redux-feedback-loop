@@ -41,6 +41,12 @@ const feedbackReducer = (state = defaultFeedback, action) => {
             ...action.payload
         }
     }
+    else if(action.type === 'RESET_FEEDBACK_FORM') {
+        return{
+            ...state,
+            ...action.payload
+        }
+    }
     return state;
 }
 

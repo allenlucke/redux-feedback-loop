@@ -4,7 +4,19 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 
 class Success extends Component {
 
+    state = {
+        feeling: 0,
+        understanding: 0,
+        support: 0,
+        comments: ''
+    }
+
     goToHome = (event) => {
+        //resets feedback form
+        this.props.dispatch({
+            type: 'RESET_FEEDBACK_FORM',
+            payload: this.state,
+        });
         //Navigates back to the home page
         this.props.history.push('/')
     }

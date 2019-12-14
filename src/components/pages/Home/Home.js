@@ -5,6 +5,7 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 class Home extends Component {
 
     goToNext = (event) => {
+        //Navigates to feeling page
         this.props.history.push('/feeling')
     }
 
