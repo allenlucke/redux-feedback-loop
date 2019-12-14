@@ -1,14 +1,22 @@
-import React, { Component } from './node_modules/react';
-import { connect } from './node_modules/react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
-import axios from './node_modules/axios';
+import axios from 'axios';
 
 class Feeling extends Component {
 
+    goToNext = (event) => {
+        //Navigates to understanding
+        this.props.history.push('/understanding')
+    }
+
     render() {
         return (
-            <div>
-
+            <div >
+               <h2>How are you feeling today?</h2> 
+               <div>
+                   <button onClick={this.goToNext}>NEXT</button>
+               </div>
             </div>
         );
     }
