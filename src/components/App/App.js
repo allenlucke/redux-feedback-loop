@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+//Style
 import './App.css';
+//Redux
+import {connect} from 'react-redux';
+import mapStoreToProps from '../redux/mapStoreToProps';
+//React-Router
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
+
 
 class App extends Component {
   render() {
@@ -16,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(mapStoreToProps)(App);
