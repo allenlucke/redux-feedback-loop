@@ -13,6 +13,7 @@ import Support from '../pages/Support/Support';
 import Comments from '../pages/Comments/Comments';
 import Review from '../pages/Review/Review'
 import Home from '../pages/Home/Home';
+import Success from '../pages/Success/Success';
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
         <Route path="/support" component={Support} />
         <Route path="/comments" component={Comments} />
         <Route path="/review" component={Review} />
+        <Route path="/success" component={Success} />
 
       </div>
       </Router>

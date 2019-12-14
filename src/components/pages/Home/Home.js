@@ -12,7 +12,7 @@ class Home extends Component {
         return(
             <div>
                 <h2>Feedback Homepage</h2>
-                <button onClick={this.goToNext}>Start a New Feedback Form</button>
+                <button onClick={this.goToNext}>Start Feedback</button>
             </div>
         )
     }

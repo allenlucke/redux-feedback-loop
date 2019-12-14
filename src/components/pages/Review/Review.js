@@ -23,7 +23,7 @@ class Review extends Component {
     onSubmit = (event) => {
         alert('Are you sure you want to Submit?');
         this.postFeedback();
-        this.props.history.push('/');
+        this.props.history.push('/success');
     }
     render() {
         const feedbackInfo = this.props.store.feedbackReducer;
