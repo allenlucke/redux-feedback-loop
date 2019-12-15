@@ -1,31 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
-import axios from 'axios';
 import FeedbackList from '../FeedbackList/FeedbackList';
 //Material-UI
 import Button from '@material-ui/core/Button';
 
 class Admin extends Component {
-    componentDidMount() {
-        this.getFeedback();
-    }
-    // GET call triggered by pageload
-    getFeedback = () => {
-        axios({
-            method: 'GET',
-            url: '/feedback'
-        })
-        .then((response) => {
-            this.props.dispatch({
-                type: 'GET_FEEDBACK',
-                payload: response.data,
-            })
-        })
-        .catch((err) => {
-            console.warn(err);
-        })
-    }
 
     goHome = (event) => {
         //Navigates to the home page
