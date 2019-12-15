@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 //Style
 import './App.css';
 //Redux
 import {connect} from 'react-redux';
 import mapStoreToProps from '../redux/mapStoreToProps';
+//Material-UI
+import Button from '@material-ui/core/Button';
 //React-Router
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Feeling from '../pages/Feeling/Feeling';
@@ -17,6 +18,7 @@ import Success from '../pages/Success/Success';
 import Admin from '../pages/Admin/Admin'
 
 
+
 class App extends Component {
   render() {
     return (
@@ -25,9 +27,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
-          <h6 className="link"><Link to='/admin'>Admin</Link></h6>
         </header>
         <br/>
+        <Button variant="contained" color="default"><Link to='/admin'>Admin</Link></Button>
         <Route path="/" exact component={Home} />
         <Route path="/feeling" component={Feeling} />
         <Route path="/understanding" component={Understanding} />

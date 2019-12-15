@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
+//Material-UI
+import Button from '@material-ui/core/Button';
 
 class Comments extends Component {
 
@@ -42,9 +44,11 @@ class Comments extends Component {
                     value={this.state.comments}
                     onChange={(event) => this.changeField(event, 'comments')}
                     />
-                    <button>NEXT</button>
+                    <div>
+                        <Button type="submit" variant="contained" color="primary">NEXT</Button>
+                    </div>
                 </form>
-                <button onClick={this.goBack}>Go Back</button>
+                <Button variant="contained" color="secondary"onClick={this.goBack}>Go Back</Button>
             </div>
         );
     }

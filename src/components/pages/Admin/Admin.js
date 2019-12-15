@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import axios from 'axios';
 import FeedbackList from '../FeedbackList/FeedbackList';
+//Material-UI
+import Button from '@material-ui/core/Button';
 
 class Admin extends Component {
     componentDidMount() {
         this.getFeedback();
     }
-
+    // GET call triggered by pageload
     getFeedback = () => {
         axios({
             method: 'GET',
@@ -49,7 +51,7 @@ class Admin extends Component {
                     <FeedbackList />
                 </table>
                 <div>
-                    <button onClick={this.goHome}>Go Home</button>
+                    <Button variant="contained" color="primary" onClick={this.goHome}>Go Home</Button>
                 </div>
             </div>
         );

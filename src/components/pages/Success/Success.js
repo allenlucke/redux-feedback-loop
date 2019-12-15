@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
+//Material-UI
+import Button from '@material-ui/core/Button';
 
 class Success extends Component {
 
@@ -26,7 +28,7 @@ class Success extends Component {
             <div>
                 <h2>Thank You!</h2>
                 <h4>Your Feedback Has Been Received</h4>
-                <button onClick={this.goToHome}>Leave New Feedback</button>
+                <Button variant="contained" color="primary" onClick={this.goToHome}>Leave New Feedback</Button>
             </div>
         )
     }

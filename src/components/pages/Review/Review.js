@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import axios from 'axios';
+//Material-UI
+import Button from '@material-ui/core/Button';
 
 class Review extends Component {
 
@@ -41,8 +43,8 @@ class Review extends Component {
                     <div>Understanding: {feedbackInfo.understanding}</div>
                     <div>Support: {feedbackInfo.support}</div>
                     <div>Comments: {feedbackInfo.comments}</div>
-                    <button onClick={this.onSubmit}>Submit Feedback</button>
-                    <button onClick={this.goBack}>Go Back</button>
+                    <Button variant="contained" color="primary" onClick={this.onSubmit}>Submit Feedback</Button>
+                    <Button variant="contained" color="secondary" onClick={this.goBack}>Go Back</Button>
             </div>
         );
     }
