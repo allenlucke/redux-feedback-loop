@@ -30,9 +30,5 @@ table, th, td {
 table {
   width: 100%;
   text-align: center;
-  background-color: rgb(141, 121, 121);
-}
-
-button {
-  background-color: aquamarine;
+  background-color: rgb(175, 201, 236);
 }

@@ -16,7 +16,7 @@ class FeedbackList extends Component {
                 <td>{item.understanding}</td>
                 <td>{item.support}</td>
                 <td>{item.comments}</td>
-                <td><button>{item.flagged}</button></td>
+                <td><Button variant="contained" color="primary">{item.flagged}</Button></td>
                 <td>{item.date}</td>
                 <td><Button variant="contained" color="secondary">Delete</Button></td>
                 </tr>

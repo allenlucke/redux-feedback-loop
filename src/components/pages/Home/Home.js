@@ -15,7 +15,9 @@ class Home extends Component {
         return(
             <div>
                 <h2>Feedback Homepage</h2>
-                <Button variant="contained" color="primary" onClick={this.goToNext}>Start Feedback</Button>
+                <div>
+                    <Button variant="contained" color="primary" onClick={this.goToNext}>Start Feedback</Button>
+                </div>
             </div>
         )
     }

@@ -94,10 +94,11 @@ class Support extends Component {
                        <span>5</span>
                     </label>
                     <div>
+                        <Button variant="contained" color="secondary" onClick={this.goBack}>Go Back</Button>
                         <Button type="submit" variant="contained" color="primary">NEXT</Button>
                    </div>
                </form>
-               <Button variant="contained" color="secondary" onClick={this.goBack}>Go Back</Button>
+               
             </div>
         );
     }
