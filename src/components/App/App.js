@@ -14,6 +14,7 @@ import Comments from '../pages/Comments/Comments';
 import Review from '../pages/Review/Review'
 import Home from '../pages/Home/Home';
 import Success from '../pages/Success/Success';
+import Admin from '../pages/Admin/Admin'
 
 
 class App extends Component {
@@ -34,6 +35,7 @@ class App extends Component {
         <Route path="/comments" component={Comments} />
         <Route path="/review" component={Review} />
         <Route path="/success" component={Success} />
+        <Route path="/admin" component={Admin} />
       </div>
       </Router>
     );
