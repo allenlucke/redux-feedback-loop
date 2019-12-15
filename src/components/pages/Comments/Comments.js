@@ -25,6 +25,12 @@ class Comments extends Component {
         this.props.history.push('/review')
     }
 
+    goBack = (event) => {
+        //Navigates to previous page
+        this.props.history.push('/support');
+    }
+
+
     render() {
         return (
             <div>
@@ -38,6 +44,7 @@ class Comments extends Component {
                     />
                     <button>NEXT</button>
                 </form>
+                <button onClick={this.goBack}>Go Back</button>
             </div>
         );
     }

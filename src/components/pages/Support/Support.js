@@ -25,6 +25,11 @@ class Support extends Component {
         this.props.history.push('/comments')
     }
 
+    goBack = (event) => {
+        //Navigates to previous page
+        this.props.history.push('/understanding');
+    }
+
     render() {
         return (
             <div>
@@ -89,6 +94,7 @@ class Support extends Component {
 
                    <button>NEXT</button>
                </form>
+               <button onClick={this.goBack}>Go Back</button>
             </div>
         );
     }

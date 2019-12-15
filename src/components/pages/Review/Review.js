@@ -21,11 +21,17 @@ class Review extends Component {
     }
 
     onSubmit = (event) => {
-        alert('Are you sure you want to Submit?');
+        alert('Are you sure you want to Submit? You will not be able to edit your feedback after submittal');
         this.postFeedback();
         //Navigates to success page
         this.props.history.push('/success');
     }
+
+    goBack = (event) => {
+        //Navigates to previous page
+        this.props.history.push('/comments');
+    }
+
     render() {
         const feedbackInfo = this.props.store.feedbackReducer;
         return (
@@ -36,6 +42,7 @@ class Review extends Component {
                     <div>Support: {feedbackInfo.support}</div>
                     <div>Comments: {feedbackInfo.comments}</div>
                     <button onClick={this.onSubmit}>Submit Feedback</button>
+                    <button onClick={this.goBack}>Go Back</button>
             </div>
         );
     }

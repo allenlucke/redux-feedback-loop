@@ -34,7 +34,6 @@ class App extends Component {
         <Route path="/comments" component={Comments} />
         <Route path="/review" component={Review} />
         <Route path="/success" component={Success} />
-
       </div>
       </Router>
     );

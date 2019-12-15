@@ -25,6 +25,11 @@ class Feeling extends Component {
         this.props.history.push('/understanding')
     }
 
+    goBack = (event) => {
+        //Navigates to previous page
+        this.props.history.push('/');
+    }
+
     render() {
         return (
             <div >
@@ -89,6 +94,7 @@ class Feeling extends Component {
 
                    <button>NEXT</button>
                </form>
+               <button onClick={this.goBack}>Go Back</button>
             </div>
         );
     }
