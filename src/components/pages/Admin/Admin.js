@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import axios from 'axios';
+import FeedbackList from '../FeedbackList/FeedbackList';
 
 class Admin extends Component {
     componentDidMount() {
@@ -41,9 +42,11 @@ class Admin extends Component {
                             <th>Support</th>
                             <th>Comments</th>
                             <th>Flagged</th>
+                            <th>Date</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
+                    <FeedbackList />
                 </table>
                 <div>
                     <button onClick={this.goHome}>Go Home</button>
