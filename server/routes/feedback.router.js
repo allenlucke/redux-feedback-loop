@@ -16,6 +16,17 @@ router.post('/', (req,res) => {
         res.sendStatus(500);
     })
 });
+//GET Route
+router.get('/', (req, res) => {
+    const queryString = `SELECT * FROM "feedback" ORDER BY "date" ASC;`;
+    pool.query(queryString)
+    .then((response) => {
+        res.send(response.rows);
+    })
+    .catch((err) => {
+        res.sendStatus(500);
+    })
+})
 
 
 module.exports = router;
