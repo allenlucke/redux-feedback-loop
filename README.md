@@ -14,7 +14,7 @@ The Redux-Feedback-Loop is a Single Page Application designed as a daily feedbac
 ![](public/images/img5.png)
 ![](public/images/img6.png)
 
-##Usage
+## Usage
 1. Begin the form by clicking on the Start Feedback button.
 2. Choose a number between 1 and 5 and click Next to answer, How are you feeling today? Or click Go Back to return to the previous page.
 3. Choose a number between 1 and 5 and click Next to answer, How well are you understanding the content? Or click Go Back to return to the previous page.
