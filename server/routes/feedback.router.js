@@ -45,3 +45,31 @@ router.delete('/:id', (req, res) => {
 
 
 module.exports = router;
+
+
+
+//Backlog Project
+//PUT Route
+// router.put('/:id', (req, res) => {
+//     const feedbackId = req.params.id;
+//     console.log(feedbackId);
+//     console.log(req.body.flagged)
+//     let flagged;
+
+//     if(req.body.flagged == 'true') {
+//         flagged = 'false';
+//     }
+//     else if (req.body.flagged == 'false') {
+//             flagged = 'true';
+//     }
+
+//     const queryString = `UPDATE "feedback" SET "flagged" = '${flagged}' WHERE "id" = $1;`;
+//     pool.query(queryString, [feedbackId])
+//         .then((response) => {
+//             console.log('flag switched')
+//             res.sendStatus(200);
+//         })
+//         .catch((err) => {
+//             res.sendStatus(500);
+//         })
+// })

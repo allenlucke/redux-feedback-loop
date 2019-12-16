@@ -43,7 +43,7 @@ class FeedbackList extends Component {
             console.warn(err);
         })
     }
-
+   
 
     render() {
         const feedbackArray = this.props.store.getReducer.map((item, index) => {
@@ -54,7 +54,7 @@ class FeedbackList extends Component {
                 <td>{item.understanding}</td>
                 <td>{item.support}</td>
                 <td>{item.comments}</td>
-                <td><Button variant="contained" color="primary">{item.flagged}</Button></td>
+                {/* <td><Button variant="contained" color="primary">{item.flagged}</Button></td> */}
                 <td>{item.date}</td>
                 <td><Button variant="contained" color="secondary" onClick={(event) => this.deleteFeedback(item.id)}>Delete</Button></td>
                 </tr>

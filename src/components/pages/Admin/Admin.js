@@ -11,7 +11,7 @@ class Admin extends Component {
         //Navigates to the home page
         this.props.history.push('/');
     }
-
+    //Flagged not currently functioning properly, Backlog
     render() {
         return (
             <div>
@@ -23,7 +23,7 @@ class Admin extends Component {
                             <th>Understanding</th>
                             <th>Support</th>
                             <th>Comments</th>
-                            <th>Flagged</th>
+                            {/* <th>Flagged</th> */}
                             <th>Date</th>
                             <th>Delete</th>
                         </tr>
